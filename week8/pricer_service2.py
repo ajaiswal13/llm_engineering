@@ -1,3 +1,23 @@
+# But there are some differences.
+# First up, rather than using a function, it uses a class.
+# It's got a class, an object oriented side to it, uh, which has like something which which handles
+# set up and then the price method again.
+# And why have we done it this way?
+# Because this gives us an opportunity to, to load in some data that will be persistent at free of charge.
+# This will get cached on the box.
+# And it's going to mean that it's able to start up much faster in the future.
+# It will take about 30s in the future to start up, rather than the minute, and a bit that it does at
+# the moment.
+# And the way that you do that with modal is that you can specify, um, a volume, uh, and the volumes
+# that we're specifying that you can see here, we're asking to have a cache directory, and for that
+# to be something which, which will give us an ability to look at this here, to have a volume that is
+# called HRF Hub Cache.
+# And so that is giving us like, like a volume, a persistent piece of storage associated with this deployment
+# that will always be attached to it.
+# And that means that we won't have to redownload the model weights every time, the model weights will
+# be stored with this deployment.
+
+
 import modal
 from modal import Volume, Image
 # Setup - define our infrastructure with code!
